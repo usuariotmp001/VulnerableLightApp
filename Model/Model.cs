@@ -43,7 +43,7 @@ namespace VulnerableWebApplication.VLAModel
             table.Columns.Add("User", typeof(string));
             table.Columns.Add("Passwd", typeof(string));
             table.Columns.Add("IsAdmin", typeof(int));
-            table.Rows.Add("User", "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", 0);
+            table.Rows.Add("user", "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", 0);
             table.Rows.Add("root", "ce5ca673d13b36118d54a7cf13aeb0ca012383bf771e713421b4d1fd841f539a", 1);
             table.Rows.Add("admin", "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a444", 1);
             table.Rows.Add("Alice", "9b510b4af0d9b121f68d5a3400975047cbf38f963963b4c7510842d9d6310e7f", 0);

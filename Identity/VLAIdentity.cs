@@ -30,9 +30,7 @@ namespace VulnerableWebApplication.VLAIdentity
         {
             /*
             Authentifie les utilisateurs par login et mot de passe, et renvoie un token JWT si l'authentification a réussi
-            */
-            
-            bool IsAdmin = false;
+            */          
             SHA256 Sha256Hash = SHA256.Create();
             byte[] Bytes = Sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(Passwd));
             StringBuilder stringbuilder = new StringBuilder();
@@ -41,10 +39,10 @@ namespace VulnerableWebApplication.VLAIdentity
 
             VLAController.VLAController.VulnerableLogs("login attempt for:\n" + User + "\n" + Passwd + "\n", LogFile);
             var DataSet = VLAModel.Data.GetDataSet();
-            var Result = DataSet.Tables[0].Select("Passwd = '" + Hash + "' and User = '" + User + "'");            
-            if( DataSet.Tables[0].Select("User = '" + User.Replace("'", "''") + "' and IsAdmin = 1" ).Length > 0) IsAdmin = true;
+            var Result = DataSet.Tables[0].Select("Passwd = '" + Hash + "' and User = '" + User + "'");
+            var userRow = DataSet.Tables[0].AsEnumerable().FirstOrDefault(row => row.Field<string>("User") == User && row.Field<int>("IsAdmin") == 1);
 
-            return Result.Length > 0 ? Results.Ok(VulnerableGenerateToken(User, IsAdmin)) : Results.Unauthorized();
+            return Result.Length > 0 ? Results.Ok(VulnerableGenerateToken(User, userRow != null)) : Results.Unauthorized();
         }
 
         public static string VulnerableGenerateToken(string User, bool IsAdmin)
