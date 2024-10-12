@@ -56,9 +56,8 @@ VLA is designed as a vulnerable backend application, running in the following en
 
 ## 🔑 Hint & Write Up
 
-* Try reading [Dojo-101](https://github.com/Aif4thah/Dojo-101), this project contains all you need to hack this app !
-* [Buy me a coffee](https://github.com/sponsors/Aif4thah?frequency=one-time&sponsor=Aif4thah) to get the solution/exploit you want
-* [Become a sponsor](https://github.com/sponsors/Aif4thah?frequency=recurring&sponsor=Aif4thah) and get access to the **full methodology** and **complete write-up**
+* Try reading [Dojo-101](https://github.com/Aif4thah/Dojo-101), this project contains all you need to hack this app.
+* [Become a sponsor](https://github.com/sponsors/Aif4thah?frequency=recurring&sponsor=Aif4thah) and get access to the **full methodology** and **complete write-up**.
 
 
 ## ✅ Prerequisites
