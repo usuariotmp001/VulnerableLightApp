@@ -73,15 +73,11 @@ cd .\VulnerableLightApp\
 ```
 
 
-## 🔧 Build
+## 🔧🔥 Build and Run
 
-```PowerShell
-dotnet build
-```
+You can use **Dotnet** or **Docker**
 
-
-## 🔥 Run
-
+### Dotnet
 
 ```PowerShell
 dotnet run [--url=<url>]
@@ -90,17 +86,24 @@ dotnet run [--url=<url>]
 Alternatively, you can use bin files :
 
 ```PowerShell
+dotnet build
 .\bin\Debug\net8.0\VulnerableWebApplication.exe [--url=<url>]
 ```
 
-
-## Docker
+### Docker
 
 ```bash
-docker build -t VulnerableLightApp
-docker run VulnerableLightApp -p 3000:3000
+docker build -t vulnerablelightapp .
+docker run -p 3000:3000 vulnerablelightapp 
 ```
 
+### first request 
+
+Default : `127.0.0.1:3000`
+
+```sh
+curl -k https://127.0.0.1:3000
+```
 
 
 ## 🛠️ Debug 
