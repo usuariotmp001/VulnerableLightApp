@@ -93,10 +93,21 @@ Alternatively, you can use bin files :
 .\bin\Debug\net8.0\VulnerableWebApplication.exe [--url=<url>]
 ```
 
-> Your first request may return a 401 code due to unsuccessful authentication. Start Hacking !
+
+## Docker
+
+```bash
+docker build -t VulnerableLightApp
+docker run VulnerableLightApp -p 3000:3000
+```
+
 
 
 ## 🛠️ Debug 
+
+### 401 Unauthorized 
+
+Your first request may return a 401 code due to unsuccessful authentication. It's ok, Start Hacking !
 
 ### Dotnet Framework
 
