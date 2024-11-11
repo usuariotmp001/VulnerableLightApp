@@ -186,6 +186,18 @@ namespace VulnerableWebApplication.VLAController
             return new string(Str);
         }
 
+        public static unsafe string VulnerableBuffer2(string UserStr)
+        {
+            /*
+            Limite les chaines à 50 caractères
+            */
+            int BuffSize = 50;
+            char* Ptr = stackalloc char[BuffSize], Str = Ptr + BuffSize;
+            foreach (var c in UserStr) *Ptr++ = c;
+
+            return new string(Str);
+        }
+
         public static string VulnerableCodeExecution(string UserStr)
         {
             /*
