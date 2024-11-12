@@ -23,6 +23,7 @@ namespace VulnerableWebApplication.VLAController
         public static void SetLogFile(string logFile)
         {
             LogFile = logFile;
+
         }
 
         public static object VulnerableHelloWorld(string FileName = "english")
